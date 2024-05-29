@@ -11,3 +11,8 @@ rules:
   steps:
   - intent: bot_challenge
   - action: utter_iamabot
+
+- rule: india top headline
+  steps:
+  - intent: india_top_headlines
+  - action: action_india_top_headlines

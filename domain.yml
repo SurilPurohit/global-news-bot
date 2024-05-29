@@ -10,6 +10,7 @@ intents:
   - bot_challenge
   - order_pizza
   - order_drinks
+  - india_top_headlines
 
 responses:
   utter_greet:
@@ -36,6 +37,13 @@ responses:
 
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
+
+  # utter_india_top_headlines:
+  # - text: "Here are the top India headlines:"
+
+actions:
+  - action_india_top_headlines
+
 
 session_config:
   session_expiration_time: 60

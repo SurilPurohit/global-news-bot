@@ -105,3 +105,24 @@ nlu:
     - coke
     - sprite
     - canada dry
+
+- intent: india_top_headlines
+  examples: |
+    - i am looking for latest news from India, can you share something?
+    - hey, what happened in India, can you share some updates
+    - Whats the latest update from India?
+    - Can you give me the current news in India?
+    - Tell me whats happening in India right now.
+    - Any recent events in India?
+    - Whats the breaking news in India?
+    - Update me on the latest Indian news.
+    - Can you share the current events in India?
+    - Whats going on in India today?
+    - Give me the recent headlines from India.
+    - Whats new in India?
+    - Can you tell me the top news stories in India?
+    - Whats trending in India news?
+    - Fill me in on the latest news from India.
+    - Whats happening in Indian news?
+    - Can you provide the latest news updates from India?
+
