@@ -43,6 +43,8 @@ responses:
 
 actions:
   - action_india_top_headlines
+  - action_india_sports_news
+  - action_india_business_news
 
 
 session_config:

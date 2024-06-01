@@ -16,3 +16,13 @@ rules:
   steps:
   - intent: india_top_headlines
   - action: action_india_top_headlines
+
+- rule: india sports news
+  steps:
+  - intent: india_sports_news
+  - action: action_india_sports_news
+
+- rule: india business news
+  steps:
+  - intent: india_business_news
+  - action: action_india_business_news

@@ -36,3 +36,51 @@ class ActionIndiaTopHeadlines(Action):
             dispatcher.utter_message(text=f"Your top headlines is {top_headlines}")
 
             return []
+
+class ActionIndiaSportsNews(Action):
+
+    def name(self) -> Text:
+        return "action_india_sports_news"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+            newsapi = NewsApiClient(api_key='9f090017d52143dc9f8e24f0a56cd505')
+
+            # /v2/top-headlines
+            sports_headlines = newsapi.get_top_headlines(
+                                        language='en',
+                                        country='in',
+                                        category='sports')
+
+            if sports_headlines['status'] == 'ok':
+                dispatcher.utter_message(text=f"Your top headlines is {sports_headlines}")
+            else:
+                dispatcher.utter_message(text=f"Response not found, Try something else.")
+
+            return []
+
+class ActionIndiaBusinessNews(Action):
+
+    def name(self) -> Text:
+        return "action_india_business_news"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+            newsapi = NewsApiClient(api_key='9f090017d52143dc9f8e24f0a56cd505')
+
+            # /v2/top-headlines
+            business_headlines = newsapi.get_top_headlines(
+                                        language='en',
+                                        country='in',
+                                        category='business')
+
+            if business_headlines['status'] == 'ok':
+                dispatcher.utter_message(text=f"Your top headlines is {business_headlines}")
+            else:
+                dispatcher.utter_message(text=f"Response not found, Try something else.")
+
+            return []

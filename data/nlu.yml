@@ -126,3 +126,51 @@ nlu:
     - Whats happening in Indian news?
     - Can you provide the latest news updates from India?
 
+
+- intent: india_sports_news
+  examples: |
+    - i am looking for latest sports news from India, can you share something?
+    - hey, what happened in India, can you share some sports updates
+    - Can you give me the latest sports news from India?
+    - Whats the recent sports update from India?
+    - Any new sports highlights from India today?
+    - Please share the latest sports events happening in India.
+    - What are the top sports stories in India right now?
+    - Give me the recent updates on Indian sports.
+    - Whats trending in Indian sports news?
+    - Can you tell me about the current sports news in India?
+    - Are there any major sports events in India recently?
+    - Whats the latest in Indian sports?
+    - Update me on the recent sports news from India.
+    - Whats happening in the world of sports in India?
+    - Any breaking sports news from India?
+    - Whats new in Indian sports this week?
+    - Share the latest sports headlines from India.
+    - Any updates on Indian sports teams?
+    - What are the latest achievements in Indian sports?
+    - Tell me about the current sports scene in India.
+    - What are the latest sports results from India?
+    - Whats the latest on Indian sports personalities?
+
+- intent: india_business_news
+  examples: |
+    - Can you give me the latest business news from India?
+    - Whats the recent business update from India?
+    - Any new business highlights from India today?
+    - Please share the latest business events happening in India.
+    - What are the top business stories in India right now?
+    - Give me the recent updates on Indian business.
+    - Whats trending in Indian business news?
+    - Can you tell me about the current business news in India?
+    - Are there any major business events in India recently?
+    - Whats the latest in Indian business?
+    - Update me on the recent business news from India.
+    - Whats happening in the world of business in India?
+    - Any breaking business news from India?
+    - Whats new in Indian business this week?
+    - Share the latest business headlines from India.
+    - Any updates on Indian companies?
+    - What are the latest achievements in Indian business?
+    - Tell me about the current business scene in India.
+    - What are the latest market trends in India?
+    - Whats the latest on Indian business leaders?
