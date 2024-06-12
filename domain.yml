@@ -11,6 +11,8 @@ intents:
   - order_pizza
   - order_drinks
   - india_top_headlines
+  - india_sports_news
+  - india_business_news
 
 responses:
   utter_greet:
