@@ -3,12 +3,13 @@ from dotenv import load_dotenv
 # Load environment variables from .env file
 load_dotenv()
 import os
-# Access the API key
+# Access the API key for OpenAI
 openai_api_key = os.getenv("OPENAI_API_KEY")
 client = OpenAI(
   api_key=openai_api_key,
 )
 
+# summarizing news article using gpt 3.5
 def summarize_news_article(title, description):
     response = client.chat.completions.create(
         engine="gpt-3.5-turbo-0125",  # You can choose other models like "gpt-3.5-turbo"

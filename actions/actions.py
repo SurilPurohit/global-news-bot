@@ -24,7 +24,7 @@ from dotenv import load_dotenv
 # Load environment variables from .env file
 load_dotenv()
 
-# Access the API key
+# Access the OpenAI API key
 openai_api_key = os.getenv("OPENAI_API_KEY")
 
 client = OpenAI(
@@ -88,10 +88,12 @@ class ActionIndiaBusinessNews(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
+            # API key for news API
             newsapi = NewsApiClient(api_key='9f090017d52143dc9f8e24f0a56cd505')
 
             user_message = tracker.latest_message.get('text')
 
+            # extacting the news from API 
             business_news_description = [user_message]
             for i in business_news_description:
                 response = client.chat.completions.create(
@@ -109,7 +111,7 @@ class ActionIndiaBusinessNews(Action):
             try:
                 country_code = json_response['country_code']
                 category = json_response['category']
-                # /v2/top-headlines
+                # /v2/top-business-headlines
                 business_headlines = newsapi.get_top_headlines(
                                             language='en',
                                             country=country_code,
@@ -124,6 +126,7 @@ class ActionIndiaBusinessNews(Action):
                     news_title_list.append(i['title'])
                     news_description_list.append(i['description'])
                 
+                # getting top 2 business news from the response
                 news_title_list = news_title_list[:2]
                 news_description_list = news_description_list[:2]
                 # summary = summarize_news_article(news_title_list, news_description_list)
