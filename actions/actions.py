@@ -93,7 +93,7 @@ class ActionIndiaBusinessNews(Action):
 
             user_message = tracker.latest_message.get('text')
 
-            # extacting the news from API 
+            # extacting the category and country of news from OpenAI library 
             business_news_description = [user_message]
             for i in business_news_description:
                 response = client.chat.completions.create(
@@ -108,40 +108,43 @@ class ActionIndiaBusinessNews(Action):
             json_response = {k.lower(): v for k, v in json_response.items()}
             print(json_response)
 
-            try:
-                country_code = json_response['country_code']
-                category = json_response['category']
-                # /v2/top-business-headlines
-                business_headlines = newsapi.get_top_headlines(
-                                            language='en',
-                                            country=country_code,
-                                            category=category)
+            # try:
+            country_code = json_response['country_code']
+            category = json_response['category']
+            # /v2/top-business-headlines
+            business_headlines = newsapi.get_top_headlines(
+                                        language='en',
+                                        country=country_code,
+                                        category=category)
 
-                message = business_headlines
-                # print(message)
+            message = business_headlines
+            # print(message)
 
-                news_title_list = []
-                news_description_list = []
-                for i in business_headlines['articles']:
-                    news_title_list.append(i['title'])
-                    news_description_list.append(i['description'])
-                
-                # getting top 2 business news from the response
-                news_title_list = news_title_list[:2]
-                news_description_list = news_description_list[:2]
-                # summary = summarize_news_article(news_title_list, news_description_list)
-                # print(summary)
-                for i, j in zip(news_title_list, news_description_list):
-                    print(i, j, '\n')
-                    message += 'Title' + i + 'Description' + j
+            news_title_list = []
+            news_description_list = []
+            for i in business_headlines['articles']:
+                news_title_list.append(i['title'])
+                news_description_list.append(i['description'])
+            
+            # getting top 2 business news from the response
+            news_title_list = news_title_list[:1]
+            news_description_list = news_description_list[:1]
+            summary = summarize_news_article(news_title_list, news_description_list)
+            print(summary)
+            # for i, j in zip(news_title_list, news_description_list):
+            message1 = ''
+            for i in news_title_list:
+                print(i)#, j, '\n')
+                # print(type(i))
+                message1 += i # 'Title' + i + 'Description' + j
 
-            except:
-                message = 'There is a bug in our side, please allow us to fix it.'
-                print(message)
+            # except:
+            #     message = 'There is a bug in our side, please allow us to fix it.'
+            #     print(message)
 
             if business_headlines['status'] == 'ok':
                 # dispatcher.utter_message(text=f"Your top headlines is {business_headlines}")
-                dispatcher.utter_message(text=str(message))
+                dispatcher.utter_message(text=str(message1))
                 
             else:
                 # dispatcher.utter_message(text=f"Response not found, Try something else.")
