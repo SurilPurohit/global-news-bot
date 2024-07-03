@@ -12,7 +12,7 @@ client = OpenAI(
 # summarizing news article using gpt 3.5
 def summarize_news_article(title, description):
     try:
-      prompt=f"Given list of titles and description, formulate a hummanly readable list of news:\n\nList of Titles: {title} \n\nList of Descriptions: {description}"
+      prompt=f"Given list of titles and description, formulate a hummanly readable list of bullet points of news:\n\nList of Titles: {title} \n\nList of Descriptions: {description}"
       response = client.chat.completions.create(
           model="gpt-3.5-turbo-0125",  # You can choose other models like "gpt-3.5-turbo"
           messages=[

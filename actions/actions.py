@@ -127,8 +127,8 @@ class ActionIndiaBusinessNews(Action):
                 news_description_list.append(i['description'])
             
             # getting top 2 business news from the response
-            news_title_list = news_title_list[:1]
-            news_description_list = news_description_list[:1]
+            news_title_list = news_title_list[:2]
+            news_description_list = news_description_list[:2]
             summary = summarize_news_article(news_title_list, news_description_list)
             print(summary)
             # for i, j in zip(news_title_list, news_description_list):
