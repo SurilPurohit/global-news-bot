@@ -12,7 +12,15 @@ client = OpenAI(
 # summarizing news article using gpt 3.5
 def summarize_news_article(title, description):
     try:
-      prompt=f"Given list of titles and description, formulate a hummanly readable list of bullet points of news:\n\nList of Titles: {title} \n\nList of Descriptions: {description}"
+      prompt=f'''
+      Given list of titles and description, formulate a hummanly readable list of bullet points of news:\n\n
+      List of Titles: {title} \n\n
+      List of Descriptions: {description}
+      Please follow the examples given below
+      input - Maximum impact will be for retail option buyers: Algo trader on proposed increase in lot size of contracts - Moneycontrol Kesoram's cement business demerger may be completed by December 2024 - Business Standard
+      output - 1. Maximum impact will be for retail option buyers: Algo trader on proposed increase in lot size of contracts - Moneycontrol 
+      2. Kesoram's cement business demerger may be completed by December 2024 - Business Standard
+      '''
       response = client.chat.completions.create(
           model="gpt-3.5-turbo-0125",  # You can choose other models like "gpt-3.5-turbo"
           messages=[
