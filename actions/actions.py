@@ -63,8 +63,9 @@ class ActionIndiaTopHeadlines(Action):
                 json_response = {k.lower(): v for k, v in json_response.items()}
                 print(f'Top News OpenAI output: {json_response}')
             
-                print(json_response['country_code'])
+                print('Country Code', json_response['country_code'])
                 country_code = json_response['country_code']
+                print('code:', country_code)
                 # category = json_response['category']
                 # /v2/top-news-headlines
                 news_headlines = newsapi.get_top_headlines(
@@ -125,6 +126,9 @@ class ActionIndiaSportsNews(Action):
             
                 country_code = json_response['country_code']
                 category = json_response['category']
+                
+                print('Country Code', json_response['country_code'])
+                print('code:', country_code, 'category: ', category)
                 # /v2/top-sports-headlines
                 sports_headlines = newsapi.get_top_headlines(
                                             language='en',
@@ -184,6 +188,8 @@ class ActionIndiaBusinessNews(Action):
             try:
                 country_code = json_response['country_code']
                 category = json_response['category']
+                print('Country Code', json_response['country_code'])
+                print('code:', country_code, 'category: ', category)
                 # /v2/top-business-headlines
                 business_headlines = newsapi.get_top_headlines(
                                             language='en',
@@ -195,7 +201,7 @@ class ActionIndiaBusinessNews(Action):
             except:
                 business_headlines = newsapi.get_top_headlines(
                                         language='en',
-                                        country='in',
+                                        # country='in',
                                         category='business')
                 
                 message1 = news(business_headlines)
