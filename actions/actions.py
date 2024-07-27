@@ -33,10 +33,10 @@ client = OpenAI(
   api_key=openai_api_key
 )
 
-class ActionIndiaTopHeadlines(Action):
+class ActionTopHeadlines(Action):
 
     def name(self) -> Text:
-        return "action_india_top_headlines"
+        return "action_top_headlines"
 
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
@@ -69,7 +69,7 @@ class ActionIndiaTopHeadlines(Action):
                 # category = json_response['category']
                 # /v2/top-news-headlines
                 news_headlines = newsapi.get_top_headlines(
-                                            language='en',
+                                            # language='en',
                                             country=country_code)
 
                 message = news_headlines
@@ -80,7 +80,8 @@ class ActionIndiaTopHeadlines(Action):
             except:
                 news_headlines = newsapi.get_top_headlines(
                                         language='en',
-                                        country='in')
+                                        # country='in'
+                                        )
                 
                 message1 = news(news_headlines)
 
@@ -92,10 +93,10 @@ class ActionIndiaTopHeadlines(Action):
                 dispatcher.utter_message(text='There is a bug on our side and we are working on it.')
             return []
 
-class ActionIndiaSportsNews(Action):
+class ActionSportsNews(Action):
 
     def name(self) -> Text:
-        return "action_india_sports_news"
+        return "action_sports_news"
 
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
@@ -131,7 +132,7 @@ class ActionIndiaSportsNews(Action):
                 print('code:', country_code, 'category: ', category)
                 # /v2/top-sports-headlines
                 sports_headlines = newsapi.get_top_headlines(
-                                            language='en',
+                                            # language='en',
                                             country=country_code,
                                             category=category)
 
@@ -140,7 +141,7 @@ class ActionIndiaSportsNews(Action):
             except:
                 sports_headlines = newsapi.get_top_headlines(
                                         language='en',
-                                        country='in',
+                                        # country='in',
                                         category='sports')
                 
                 message1 = news(sports_headlines)
@@ -154,10 +155,10 @@ class ActionIndiaSportsNews(Action):
             return []
 
 
-class ActionIndiaBusinessNews(Action):
+class ActionBusinessNews(Action):
 
     def name(self) -> Text:
-        return "action_india_business_news"
+        return "action_business_news"
 
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
@@ -192,7 +193,7 @@ class ActionIndiaBusinessNews(Action):
                 print('code:', country_code, 'category: ', category)
                 # /v2/top-business-headlines
                 business_headlines = newsapi.get_top_headlines(
-                                            language='en',
+                                            # language='en',
                                             country=country_code,
                                             category=category)
 

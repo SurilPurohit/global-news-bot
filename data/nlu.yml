@@ -106,71 +106,71 @@ nlu:
     - sprite
     - canada dry
 
-- intent: india_top_headlines
+- intent: top_headlines
   examples: |
-    - i am looking for latest news from India, can you share something?
-    - hey, what happened in India, can you share some updates
-    - Whats the latest update from India?
-    - Can you give me the current news in India?
-    - Tell me whats happening in India right now.
-    - Any recent events in India?
-    - Whats the breaking news in India?
-    - Update me on the latest Indian news.
-    - Can you share the current events in India?
-    - Whats going on in India today?
-    - Give me the recent headlines from India.
-    - Whats new in India?
-    - Can you tell me the top news stories in India?
-    - Whats trending in India news?
-    - Fill me in on the latest news from India.
-    - Whats happening in Indian news?
-    - Can you provide the latest news updates from India?
+    - i am looking for latest news, can you share something?
+    - hey, what happened, can you share some updates
+    - Whats the latest update from world?
+    - Can you give me the current news?
+    - Tell me whats happening in world right now.
+    - Any recent events in world?
+    - Whats the breaking news in world?
+    - Update me on the latest world news.
+    - Can you share the current events in world?
+    - Whats going on in world today?
+    - Give me the recent headlines from world.
+    - Whats new in world?
+    - Can you tell me the top news stories in world?
+    - Whats trending in world news?
+    - Fill me in on the latest news from world.
+    - Whats happening in worldn news?
+    - Can you provide the latest news updates from world?
 
 
-- intent: india_sports_news
+- intent: sports_news
   examples: |
-    - i am looking for latest sports news from India, can you share something?
-    - hey, what happened in India, can you share some sports updates
-    - Can you give me the latest sports news from India?
-    - Whats the recent sports update from India?
-    - Any new sports highlights from India today?
-    - Please share the latest sports events happening in India.
-    - What are the top sports stories in India right now?
-    - Give me the recent updates on Indian sports.
-    - Whats trending in Indian sports news?
-    - Can you tell me about the current sports news in India?
-    - Are there any major sports events in India recently?
-    - Whats the latest in Indian sports?
-    - Update me on the recent sports news from India.
-    - Whats happening in the world of sports in India?
-    - Any breaking sports news from India?
-    - Whats new in Indian sports this week?
-    - Share the latest sports headlines from India.
-    - Any updates on Indian sports teams?
-    - What are the latest achievements in Indian sports?
-    - Tell me about the current sports scene in India.
-    - What are the latest sports results from India?
-    - Whats the latest on Indian sports personalities?
+    - i am looking for latest sports news from world, can you share something?
+    - hey, what happened in world, can you share some sports updates
+    - Can you give me the latest sports news from world?
+    - Whats the recent sports update from world?
+    - Any new sports highlights from world today?
+    - Please share the latest sports events happening in world.
+    - What are the top sports stories in world right now?
+    - Give me the recent updates on worldn sports.
+    - Whats trending in worldn sports news?
+    - Can you tell me about the current sports news in world?
+    - Are there any major sports events in world recently?
+    - Whats the latest in worldn sports?
+    - Update me on the recent sports news from world.
+    - Whats happening in the world of sports in world?
+    - Any breaking sports news from world?
+    - Whats new in worldn sports this week?
+    - Share the latest sports headlines from world.
+    - Any updates on worldn sports teams?
+    - What are the latest achievements in worldn sports?
+    - Tell me about the current sports scene in world.
+    - What are the latest sports results from world?
+    - Whats the latest on worldn sports personalities?
 
-- intent: india_business_news
+- intent: business_news
   examples: |
-    - Can you give me the latest business news from India?
-    - Whats the recent business update from India?
-    - Any new business highlights from India today?
-    - Please share the latest business events happening in India.
-    - What are the top business stories in India right now?
-    - Give me the recent updates on Indian business.
-    - Whats trending in Indian business news?
-    - Can you tell me about the current business news in India?
-    - Are there any major business events in India recently?
-    - Whats the latest in Indian business?
-    - Update me on the recent business news from India.
-    - Whats happening in the world of business in India?
-    - Any breaking business news from India?
-    - Whats new in Indian business this week?
-    - Share the latest business headlines from India.
-    - Any updates on Indian companies?
-    - What are the latest achievements in Indian business?
-    - Tell me about the current business scene in India.
-    - What are the latest market trends in India?
-    - Whats the latest on Indian business leaders?
+    - Can you give me the latest business news from world?
+    - Whats the recent business update from world?
+    - Any new business highlights from world today?
+    - Please share the latest business events happening in world.
+    - What are the top business stories in world right now?
+    - Give me the recent updates on worldn business.
+    - Whats trending in worldn business news?
+    - Can you tell me about the current business news in world?
+    - Are there any major business events in world recently?
+    - Whats the latest in worldn business?
+    - Update me on the recent business news from world.
+    - Whats happening in the world of business in world?
+    - Any breaking business news from world?
+    - Whats new in worldn business this week?
+    - Share the latest business headlines from world.
+    - Any updates on worldn companies?
+    - What are the latest achievements in worldn business?
+    - Tell me about the current business scene in world.
+    - What are the latest market trends in world?
+    - Whats the latest on worldn business leaders?

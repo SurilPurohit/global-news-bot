@@ -12,17 +12,17 @@ rules:
   - intent: bot_challenge
   - action: utter_iamabot
 
-- rule: india top headline
+- rule: top headline
   steps:
-  - intent: india_top_headlines
-  - action: action_india_top_headlines
+  - intent: top_headlines
+  - action: action_top_headlines
 
-- rule: india sports news
+- rule: sports news
   steps:
-  - intent: india_sports_news
-  - action: action_india_sports_news
+  - intent: sports_news
+  - action: action_sports_news
 
-- rule: india business news
+- rule: business news
   steps:
-  - intent: india_business_news
-  - action: action_india_business_news
+  - intent: business_news
+  - action: action_business_news
